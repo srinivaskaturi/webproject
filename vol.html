@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Registration Form</title>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFEBD2;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input, select, textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+ </style>
+<script>
+    function myFunction() {
+      alert("I am an alert box!");
+    }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Volunteer Registration</h1>
+        <form action="/submit" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="availability">Skills</label>
+            <select id="availability" name="availability" required>
+                <option value="">Select...</option>
+                <option value="weekdays">Leader</option>
+                <option value="weekends">Designer</option>
+                <option value="both">Controller</option>
+            </select>
+
+            <label for="skills">Skills and Experience:</label>
+            <textarea id="skills" name="skills" rows="4" placeholder="Describe your skills and experience"></textarea>
+
+            <button type="submit" onclick="window.alert('Successfully Registered')">Register</button>
+            &emsp;<button ><a href="main.html" >Back</a></button>
+        </form>
+    </div>
+</body>
+</html>

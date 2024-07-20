@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Registration Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #FFEDB2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#message {
+    text-align: center;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Registration Form</h2>
+        <form id="registrationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required >
+
+            <label for="danceStyle">Choose the Domain :</label>
+            <select id="danceStyle" name="danceStyle" required>
+                <option value="">Select a style</option>
+                <option value="ballet">Dance</option>
+                <option value="hiphop">Singing</option>
+                <option value="salsa">Drama</option>
+                <option value="contemporary">Ramp walk</option>
+                <option value="ballet">Aptitude</option>
+                <option value="hiphop">Coding</option>
+                <option value="salsa">Web design</option>
+                <option value="contemporary">Arts</option>
+                <option value="">Cultural Craftsmanship</option>
+                <option value="">Rhythms of the World</option>
+                <option value="">Global Innovation Lab</option>
+                <option value="">World Cuisine Creations</option>
+            </select>
+            <button type="submit">Register</button>
+            
+        </form>
+        <div id="message"></div>
+    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const danceStyle = document.getElementById('danceStyle').value;
+
+    if (name && email && phone && danceStyle) {
+        document.alert("Register Succefully");
+    } else {
+        document.getElementById('message').textContent = 'Please fill out all fields.';
+        document.getElementById('message').style.color = 'red';
+    }
+});
+    </script>
+</body>

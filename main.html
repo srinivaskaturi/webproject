@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicultural Festival</title>
+    <style>
+/* Global reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Body and header styling */
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    background-color: #333; /* Solid background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.header-content {
+    padding: 20px;
+    max-width: 90%;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.event-name {
+    font-size: 2.5em;
+    color: red;
+    margin-bottom: 5px;
+    font-family: 'Dancing Script', cursive; /* Cursive font for the main heading */
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: lightcoral;
+    margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive; /* Cursive font for the tagline */
+    font-weight: normal; /* Adjust font weight to match the tagline */
+}
+
+.event-details {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* Main content styling */
+main {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Overview section styling */
+.overview {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.overview h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.overview p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta {
+    background-color: lightcoral;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.cta a {
+    color: black;
+    text-decoration: none;
+}
+
+.cta:hover {
+    background-color: #e57373;
+}
+
+/* Sponsors section styling */
+.sponsors {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align the text in the section */
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.sponsors h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #34495e; /* Adjust color as needed */
+    font-family: 'Dancing Script', cursive; /* Cursive font for consistency */
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sponsor-logos img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Team section styling */
+.team {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px; /* Adjust width as needed */
+    transition: transform 0.3s ease;
+}
+
+.member img {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+.member-info {
+    font-size: 1em;
+}
+
+.name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.role {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 10px;
+    }
+
+    .event-name {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .event-details {
+        font-size: 0.9em;
+    }
+
+    .overview, .sponsors, .team {
+        padding: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .member {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+article {
+    background: red;
+    tex-color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom:59px;
+    width: 54%;
+    z-index: 1000;
+border-radius:5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+</style>    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="event-name">Multicultural Festival</h1>
+            <p class="tagline">Celebrate Diversity, Embrace Unity</p>
+            <p class="event-details">Date: July 20, 2024 | Venue: R.V.R & JC</p>
+        </div>
+    </header>
+<article>
+<nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cont.html">Contact Us</a></li>
+            </ul>
+        </nav>
+</article>
+    <main>
+        <section class="overview">
+            <h2>Festival Overview</h2>
+            <p>Join us for a day filled with vibrant cultural performances, delicious cuisines, and engaging workshops. The Multicultural Festival aims to celebrate diversity and foster understanding through a series of exciting events and activities.</p>
+            <div class="buttons">
+                <button class="cta"><a href="ticketinf0.html">Get Your Ticket</a></button>
+                <button class="cta"><a href="vol.html">Volunteering</a></button>
+            </div>
+            <p>
+<br><br><i>Culture as Explanation: Cultural Concerns
+                M. Douglas, in Internation
+                al Encyclopedia of the Social & Behavioral Sciences, 2001
+                Cultural theory is a method of studying cultural conflict. It makes a neo-Durkheimian synthesis around a dynamic c
+                oncept of culture as simultaneously creating, sustaining, and produced by institutions. 
+<p>A focus on institutional factors avoids confusion of subjective and objective viewpoints. Conflicts of values are interpreted in terms of
+ competition between incompatible organizational forms. This approach to policy analysis has been applied to disputes concerning risk, environmental
+ degradation, water engineering, organizational control, crime, traffic regulation, and religion. 
+</p><p>The method is to create an abstract field of possible 
+organizational environments in two dimensions (strength of group boundaries and strength of structuring constraints on individual behavior), giving four ideal types of organization, each with its appropriate culture. Upon the various positions in this field, specific attitudes and values are postulated as institutionalized cultural pressures. The moral climate of a bureaucratic hierarchy shows in the lines and boundaries it draws; a dissident group develops an enclave culture, likewise a competitive market exerts pressure for freedom to contract, a population of isolates behaves 
+                idiosyncratically for lack of pressures to conform. All four cultural types are assumed present in any community, each in dynamic rivalry 
+with the others.</p>
+        </p></i></section>
+        <section class="sponsors">
+        <section class="team">
+            <div class="services">
+                <h1><strong style="align-items: center;">OUR SPONSERS</strong></h1><br><br>
+            </div>
+            <div class="team-members">
+                <div class="member">
+                    <img src="https://i.pinimg.com/564x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg" alt="Leo Henry">
+                    <p class="member-info">
+                        <span class="name">Leo Henry</span><br>
+                    </p>
+                </div>
+                <div class="member">
+                    <img src="https://i.pinimg.com/564x/ab/5b/ad/ab5bade8d52b4d611630a6767c6d885a.jpg" alt="Sofia">
+                    <p class="member-info">
+                        <span class="name">Sofia</span><br>
+                    </p>
+                </div>
+                <div class="member">
+                    <img src="https://i.pinimg.com/564x/20/84/22/2084220e18961fba23a26966b3cd95cd.jpg" alt="Arina Thomas">
+                    <p class="member-info">
+                        <span class="name">Arina Thomas</span><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

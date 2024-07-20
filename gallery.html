@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Gallery</title>
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header .tagline {
+    font-size: 1.2em;
+    color: #666;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gallery-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjusted min-width */
+    gap: 30px; /* Increased gap */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 200px; /* Fixed height for uniformity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img, .gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area while maintaining aspect ratio */
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item video {
+    border: 2px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>COLLGE GALLERY</h1>
+        <p class="tagline">Capturing Moments, Celebrating Excellence</p>
+    </header>
+    <main>
+        <section class="gallery-section">
+            <h2>Campus Highlights</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/564x/5d/1e/d1/5d1ed1b19d0b2a2a236ef70b945a55b0.jpg" alt="Campus View 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/564x/56/d5/9b/56d59b06437083688f66f987349ce520.jpg" alt="Campus View 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/564x/8d/98/41/8d98412a78fb8709bc4217c454b6c657.jpg" alt="Campus View 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/564x/a0/36/07/a036074cccc11983db08b491e37212c2.jpg" alt="Campus View 4">
+                </div>
+            </div>
+        </section>
+        <section class="gallery-section">
+            <h2>Academic Achievements</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/736x/f0/65/d3/f065d3d78898fdeb5b1b28ad55d7d51b.jpg" alt="Academic Achievement 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/736x/f4/63/40/f4634003ced5d215a053274e0f20a5ce.jpg" alt="Academic Achievement 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/564x/17/4d/9d/174d9d1016643d4bb7fdb603be728486.jpg" alt="Academic Achievement 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/564x/89/e6/dd/89e6ddc8a7c5aa52e95296fc84171f25.jpg" alt="Academic Achievement 4">
+                </div>
+            </div>
+        </section>
+        <section class="gallery-section">
+            <h2>Events and Activities</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/564x/4b/51/15/4b51152ec6dfdeadbc157fc31c4c414f.jpg" alt="Event 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/736x/b1/77/e4/b177e4e841336b8c48c5d5ccda1e9d5d.jpg" alt="Event 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/564x/6d/c8/62/6dc8623b947cca093f38cba66339b6ec.jpg" alt="Event 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/736x/82/46/9b/82469b1d0664209e7e847873b6e93ccb.jpg" alt="Event 4">
+                </div>
+            </div>
+            <br>
+            <br>
+            &emsp;<button ><a href="main.html" style="text-decoration:none;color:white;background-color:blue;size:5px">Back</a></button>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicultural Festival Workshops</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F7F5D6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header .tagline {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.workshop {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.workshop img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshop img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.details {
+    padding: 20px;
+}
+
+.details h2 {
+    margin-bottom: 10px;
+}
+
+.details p {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .workshop {
+        flex-direction: row;
+        max-width: 48%;
+    }
+
+    .workshop img {
+        width: 40%;
+    }
+
+    .details {
+        padding: 20px;
+        flex: 1;
+    }
+}
+    </style>
+</head>
+<body >
+    <header>
+        <h1>WORKSHOPS</h1>
+        <p class="tagline">Explore, Create, and Innovate Across Cultures</p>
+    </header>
+    <div class="container">
+        <div class="workshop">
+            <img src="https://i.pinimg.com/564x/2a/91/ea/2a91ead20a0ab86a3456cbf69d1d0ff3.jpg" alt="Cultural Craftsmanship">
+            <div class="details">
+                <h2>Cultural Craftsmanship</h2>
+                <p>Explore traditional arts and crafts from various cultures. Learn techniques and create your own unique pieces.</p>
+                <p><strong>Timing:</strong> 10:00 AM - 12:00 PM</p>
+                <button class="register-btn"><a href="reg.html">register</a></button>
+            </div>
+        </div>
+        <div class="workshop">
+            <img src="https://i.pinimg.com/564x/a5/c6/1b/a5c61b578c7be929ba65a4ae8f9a15e4.jpg
+            " alt="Rhythms of the World">
+            <div class="details">
+                <h2>Rhythms of the World</h2>
+                <p>Experience the diverse rhythms and music from around the globe. Participate in drumming and musical workshops.</p>
+                <p><strong>Timing:</strong> 1:00 PM - 3:00 PM</p>
+                <button class="register-btn"><a href="reg.html">register</a></button>
+            </div>
+        </div>
+        <div class="workshop">
+            <img src="https://i.pinimg.com/564x/9d/fd/9e/9dfd9e4624dfed15a060a97b4fa55da3.jpg
+            " alt="Global Innovation Lab">
+            <div class="details">
+                <h2>Global Innovation Lab</h2>
+                <p>Join collaborative projects inspired by international engineering practices. Innovate with peers from different cultures.</p>
+                <p><strong>Timing:</strong> 3:30 PM - 5:30 PM</p>
+                <button class="register-btn"><a href="reg.html">register</a></button>
+            </div>
+        </div>
+        <div class="workshop">
+            <img src="https://i.pinimg.com/474x/f1/62/d2/f162d2824d3694584e0d4b4da0412bd8.jpg" alt="World Cuisine Creations">
+            <div class="details">
+                <h2>World Cuisine Creations</h2>
+                <p>Delve into hands-on cooking classes featuring traditional dishes from various cultures. Taste the world on your plate.</p>
+                <p><strong>Timing:</strong> 6:00 PM - 8:00 PM</p>
+                <button class="register-btn"><a href="reg.html">register</a></button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    &emsp;<button ><a href="main.html" style="text-decoration:none;color:white">Back</a></button>
+        <script>
+        function registerWorkshop(workshopName) {
+            alert('You have registered for ' + workshopName);
+        }
+    </script>
+</body>
+</html>

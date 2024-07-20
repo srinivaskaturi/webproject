@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:white; /* Light gray background */
+}
+
+.contact-container {
+    background-color: #FFEDB2; /* Light creamy color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 120px; /* Adjust size as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.contact-info button {
+    background-color: #FFB74D; /* Button color */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.contact-info button:hover {
+    background-color: #FFA500; /* Darker shade on hover */
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media h2 {
+    margin-bottom: 10px;
+    color: #FFB74D; /* Warm, complementary color */
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media ul li {
+    margin: 10px 0;
+}
+
+.social-media a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.social-media img {
+    width: 24px; /* Adjust logo size as needed */
+    margin-right: 8px;
+    
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+    <div class="contact-container">
+        <header>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQymnyWyPw69CC45boGzDYHpPKJzRk5plcB7w&s" alt="Company Logo" class="logo" style="border-radius:25px">
+            <h1>Contact Us</h1>
+        </header>
+        <div class="content">
+            <div class="contact-info">
+                <p><strong>John Doe:</strong> <span id="phone1">+123 456 7890</span> <button onclick="copyToClipboard('#phone1')">Copy</button></p>
+                <p><strong>Jane Smith:</strong> <span id="phone2">+987 654 3210</span> <button onclick="copyToClipboard('#phone2')">Copy</button></p>
+<p>Participating in cultural events can involve various roles, each contributing to the overall success and richness of the event. Here are some key roles often seen in cultural events:</p>
+<p>Event Coordinator:
+
+Oversees the planning and execution of the event.
+Ensures all aspects of the event are organized and runs smoothly.
+Program Manager:
+
+Develops the schedule and content of the event.
+Coordinates with performers, speakers, and participants.
+Logistics Coordinator:
+
+Manages the logistical aspects, including venue setup, transportation, and equipment.
+Ensures all materials and resources are available as needed.</p>
+            </div>
+            <div class="social-media" >
+                <h2>Follow Us</h2>
+                <ul>
+                    &emsp;&emsp;&emsp;&emsp;<li><a href="" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvn4en8qCRCttwRAAKBgVd9TRjUts6KV25xg&s" alt="Facebook Logo"> Facebook</a></li>
+                    &emsp;&emsp;&emsp;&emsp;<li><a href="" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrcD3BVldrXMXtigPxBZDuSTMRXJXDkpZ0Gg&s" alt="Twitter Logo"> Twitter</a></li>
+                    &emsp;&emsp;&emsp;&emsp;<li><a href="" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkii9QTSGPFuQtOn0LWhISCzqswVgPh-S9UA&s" alt="Instagram Logo"> Instagram</a></li>
+                    &emsp;&emsp;&emsp;&emsp;<li><a href="" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA2PKdt0Pxjpndf8dmn--5Pds4Rpob-1CAiw&s" alt="LinkedIn Logo"> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>'
+    <script >
+function copyToClipboard(elementId) {
+    // Get the text from the specified element
+    const text = document.querySelector(elementId).textContent;
+
+    // Create a temporary textarea to copy the text
+    const tempInput = document.createElement('textarea');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+
+    // Optional: Notify the user that the text has been copied
+    alert('Phone number copied to clipboard!');
+}
+
+</script>
+&emsp;<button ><a href="main.html" style="text-decoration:none;color:white;background-color:blue;size:5px">Back</a></button>
+
+</body>
+</html>
