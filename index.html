@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +27,9 @@ body {
 
 header {
     width: 100%;
-    max-width: 800px;
-    height: 300px;
-    background-color: #333; /* Solid background color */
+    max-width: 1200px; /* Adjusted for wider screens */
+    height: 200px; /* Adjusted for landscape layout */
+    background-color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,29 +49,32 @@ header {
 }
 
 .event-name {
-    font-size: 2.5em;
+    font-size: 3em;
     color: red;
     margin-bottom: 5px;
-    font-family: 'Dancing Script', cursive; /* Cursive font for the main heading */
+    font-family: 'Dancing Script', cursive;
 }
 
 .tagline {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: lightcoral;
     margin-bottom: 10px;
-    font-family: 'Dancing Script', cursive; /* Cursive font for the tagline */
-    font-weight: normal; /* Adjust font weight to match the tagline */
+    font-family: 'Dancing Script', cursive;
+    font-weight: normal;
 }
 
 .event-details {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #fff;
 }
 
 /* Main content styling */
 main {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row; /* Changed to row for landscape layout */
+    gap: 20px;
 }
 
 /* Overview section styling */
@@ -84,10 +86,11 @@ main {
     text-align: center;
     margin-bottom: 20px;
     animation: slideIn 1s ease-out;
+    flex: 1; /* Adjusted for landscape layout */
 }
 
 .overview h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
     color: #34495e;
 }
@@ -130,16 +133,17 @@ main {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center align the text in the section */
+    text-align: center;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
+    flex: 1; /* Adjusted for landscape layout */
 }
 
 .sponsors h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #34495e; /* Adjust color as needed */
-    font-family: 'Dancing Script', cursive; /* Cursive font for consistency */
+    color: #34495e;
+    font-family: 'Dancing Script', cursive;
 }
 
 .sponsor-logos {
@@ -150,7 +154,7 @@ main {
 }
 
 .sponsor-logos img {
-    width: 150px; /* Adjust as needed */
+    width: 150px;
     height: auto;
     border-radius: 10px;
 }
@@ -163,6 +167,7 @@ main {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
+    flex: 1; /* Adjusted for landscape layout */
 }
 
 .team-members {
@@ -178,14 +183,14 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 200px; /* Adjust width as needed */
+    width: 200px;
     transition: transform 0.3s ease;
 }
 
 .member img {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border-radius: 50%; /* Makes the image circular */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 .member-info {
@@ -204,6 +209,10 @@ main {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    header {
+        height: 150px; /* Adjusted for smaller screens */
+    }
+
     .header-content {
         padding: 10px;
     }
@@ -220,8 +229,13 @@ main {
         font-size: 0.9em;
     }
 
+    main {
+        flex-direction: column; /* Stack sections vertically on small screens */
+    }
+
     .overview, .sponsors, .team {
         padding: 20px;
+        flex: none;
     }
 
     .buttons {
@@ -247,15 +261,27 @@ main {
         opacity: 1;
     }
 }
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 article {
     background: red;
-    tex-color: white;
+    color: white;
     padding: 10px 0;
     position: relative;
-    bottom:59px;
+    bottom: 59px;
     width: 54%;
     z-index: 1000;
-border-radius:5px;
+    border-radius: 5px;
 }
 
 nav ul {
@@ -275,18 +301,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
 }
-
-@keyframes slideIn {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-</style>    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+</style>
 </head>
 <body>
     <header>
@@ -296,8 +311,9 @@ nav ul li a {
             <p class="event-details">Date: July 20, 2024 | Venue: R.V.R & JC</p>
         </div>
     </header>
-<article>
-<nav>
+<br><br>
+    <article>
+        <nav>
             <ul>
                 <li><a href="main.html">Home</a></li>
                 <li><a href="events.html">Events</a></li>
@@ -307,7 +323,7 @@ nav ul li a {
                 <li><a href="cont.html">Contact Us</a></li>
             </ul>
         </nav>
-</article>
+    </article>
     <main>
         <section class="overview">
             <h2>Festival Overview</h2>
@@ -317,25 +333,16 @@ nav ul li a {
                 <button class="cta"><a href="vol.html">Volunteering</a></button>
             </div>
             <p>
-<br><br><i>Culture as Explanation: Cultural Concerns
-                M. Douglas, in Internation
-                al Encyclopedia of the Social & Behavioral Sciences, 2001
-                Cultural theory is a method of studying cultural conflict. It makes a neo-Durkheimian synthesis around a dynamic c
-                oncept of culture as simultaneously creating, sustaining, and produced by institutions. 
-<p>A focus on institutional factors avoids confusion of subjective and objective viewpoints. Conflicts of values are interpreted in terms of
- competition between incompatible organizational forms. This approach to policy analysis has been applied to disputes concerning risk, environmental
- degradation, water engineering, organizational control, crime, traffic regulation, and religion. 
-</p><p>The method is to create an abstract field of possible 
-organizational environments in two dimensions (strength of group boundaries and strength of structuring constraints on individual behavior), giving four ideal types of organization, each with its appropriate culture. Upon the various positions in this field, specific attitudes and values are postulated as institutionalized cultural pressures. The moral climate of a bureaucratic hierarchy shows in the lines and boundaries it draws; a dissident group develops an enclave culture, likewise a competitive market exerts pressure for freedom to contract, a population of isolates behaves 
-                idiosyncratically for lack of pressures to conform. All four cultural types are assumed present in any community, each in dynamic rivalry 
-with the others.</p>
-        </p></i></section>
+                <br><br><i>Culture as Explanation: Cultural Concerns
+                M. Douglas, in International Encyclopedia of the Social & Behavioral Sciences, 2001
+                Cultural theory is a method of studying cultural conflict. It makes a neo-Durkheimian synthesis around a dynamic concept of culture as simultaneously creating, sustaining, and produced by institutions. 
+                <p>A focus on institutional factors avoids confusion of subjective and objective viewpoints. Conflicts of values are interpreted in terms of competition between incompatible organizational forms. This approach to policy analysis has been applied to disputes concerning risk, environmental degradation, water engineering, organizational control, crime, traffic regulation, and religion. 
+                </p><p>The method is to create an abstract field of possible organizational environments in two dimensions (strength of group boundaries and strength of structuring constraints on individual behavior), giving four ideal types of organization, each with its appropriate culture. Upon the various positions in this field, specific attitudes and values are postulated as institutionalized cultural pressures. The moral climate of a bureaucratic hierarchy shows in the lines and boundaries it draws; a dissident group develops an enclave culture, likewise a competitive market exerts pressure for freedom to contract, a population of isolates behaves idiosyncratically for lack of pressures to conform. All four cultural types are assumed present in any community, each in dynamic rivalry with the others.</p>
+            </p></i>
+        </section>
         <section class="sponsors">
-        <section class="team">
-            <div class="services">
-                <h1><strong style="align-items: center;">OUR SPONSERS</strong></h1><br><br>
-            </div>
-            <div class="team-members">
+            <h2>Our Sponsors</h2>
+            <div class="sponsor-logos">
                 <div class="member">
                     <img src="https://i.pinimg.com/564x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg" alt="Leo Henry">
                     <p class="member-info">
